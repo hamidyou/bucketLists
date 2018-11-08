@@ -1,0 +1,27 @@
+body, .nav-link {
+  background-image: url('/images/backgrounds-blank-blue-953214.jpg');
+  background-size: cover;
+  color: white;
+}
+
+main .card {
+  background-image: url('/images/background-canvas-close-up-1020320.jpg');
+  background-size: cover;
+}
+
+.nav-item {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0px 2px;
+}
+
+.card {
+  border: 1px solid black
+}
+
+.card-header {
+  border-bottom: 1px solid black
+}

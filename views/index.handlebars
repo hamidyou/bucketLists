@@ -1,0 +1,73 @@
+<div class="container text-center">
+  <h1 class="display-3">Culinary Bucket List</h1>
+</div>
+
+<main class="container">
+  <div class="card">
+    <div class="card-header text-center">
+      {{!-- <h1>Remaining on Bucket List</h1>
+      <hr class="my-2"> --}}
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active text-light" id="restTab">RESTAURANTS</a>
+        </li>
+        {{!-- <li class="nav-item">
+          <a class="nav-link" id="eatTab">EAT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="makeTab">MAKE</a>
+        </li> --}}
+      </ul>
+    </div>
+    <div class="card-body text-dark" id="restaurants">
+      <h3 class="card-title text-center">RESTAURANTS</h3>
+      <div class="row">
+        <div class="col-6 px-2">
+          <div class="card-text border border-dark">
+            <h4 class="text-center">REMAINING</h4>
+            <ul>
+              {{#each restaurants}}
+              {{#unless visited}}
+              {{> restaurant-block visited=false}}
+              {{/unless}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 px-2">
+          <div class="card-text border border-dark">
+            <h4 class="text-center">COMPLETED</h4>
+            <ul>
+              {{#each restaurants}}
+              {{#if visited}}
+              {{> restaurant-block visited=true}}
+              {{/if}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+<div class="container w-25 border border-light my-5">
+  <h2 class="text-center">Add a Restaurant</h2>
+  <form class="create-form my-2">
+    <div class="form-group">
+      <label for="restName">Restaurant Name:</label>
+      <input type="text" id="restName" name="name">
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="description">
+    </div>
+    <div class="form-group">
+      <label for="cuisine">Cuisine:</label>
+      <input type="text" id="cuisine" name="description">
+    </div>
+    <div class="text-center">
+      <button id="submit">Add Restaurant</button>
+    </div>
+  </form>
+</div>

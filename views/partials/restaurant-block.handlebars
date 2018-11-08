@@ -1,0 +1,21 @@
+<li class="my-2">
+  <h4>{{restaurant_name}}</h4>
+  <h5>Location: {{location}}</h5>
+  <h5>Cuisine: {{cuisine}}</h5>
+  {{#if notes}}
+  <p>
+    Notes: {{notes}}
+  </p>
+  {{/if}}
+  {{#if date_visited}}
+  <p>
+    Date Visited: {{date_visited}}
+  </p>
+  {{/if}}
+  {{#unless visited}}
+  <button type="button" class="btn btn-sm btn-dark doneBtn" data-id="{{id}}" data-visited="{{visited}}">DONE!</button>
+  <input type="text" id="id{{id}}notes" placeholder="Notes From Visit">
+  <input id="id{{id}}date" type="date">
+  {{/unless}}
+</li>
+<hr class="mr-5">
